@@ -16,7 +16,7 @@
  */
 function effectiveDamage(power, armor, armorPenetration) {
   let effectiveArmor = normalize(armor) - normalize(armorPenetration);
-  let damageDecrease = effectiveArmor / (100 + effectiveArmor);
+  const damageDecrease = effectiveArmor / (100 + effectiveArmor);
   return Math.floor(normalize(power) * (1 - damageDecrease));
 }
 
